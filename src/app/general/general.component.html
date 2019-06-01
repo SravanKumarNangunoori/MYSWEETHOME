@@ -1,0 +1,22 @@
+<div>
+
+   <h1>
+    <i class="wi wi-barometer"></i> Your Local Weather Forecast
+  </h1>
+  
+  <p>Current Position: {{ lat }} / {{ lng }} </p>
+  
+  <button (click)="getForecast()">Get Forecast</button>
+  
+  <h1>Current Forecast</h1>
+  
+  <div *ngIf="forecast " class="columns">
+      <h1>Time zone:: {{forecast.timezone}} </h1>
+        <h4> temperature :{{forecast.currently.temperature}} </h4>
+        <h4> precipIntensity :{{forecast.currently.precipIntensity}} </h4>
+        <h4> dewPoint :{{forecast.currently.dewPoint}} </h4>
+        <h4> humidity :{{forecast.currently.humidity}} </h4>
+        <h4> windSpeed :{{forecast.currently.windSpeed}} </h4>
+        <h4> ozone :{{forecast.currently.ozone}} </h4>
+  </div>
+</div>

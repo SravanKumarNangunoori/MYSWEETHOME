@@ -1,0 +1,19 @@
+
+<form>
+  Event name:<br>
+  <input type="text" [(ngModel)]="eventname" [ngModelOptions]="{standalone: true}"><br>
+  Event date<br>
+  <input type="date" [(ngModel)]="eventdate" [ngModelOptions]="{standalone: true}">
+  <button (click)="addEvent()">Add Event</button>
+</form>
+<ng-container *ngIf="options">
+  <ng-fullcalendar
+    #fullcalendar
+    (dateClick)="dateClick($event)"
+    (clickButton)="clickButton($event)"
+    (eventDragStop)="eventDragStop($event)"
+    [eventsModel]="eventsModel"
+    [options]="options"
+    (eventClick)="eventClick($event)"
+  ></ng-fullcalendar>
+</ng-container>
