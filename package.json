@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "packagr": "ng-packagr -p ng-package.json",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --base-href --prod"
   },
   "private": true,
   "dependencies": {
