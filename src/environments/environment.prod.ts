@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  getregisteredusers:'/api/registeredUsers',
+  addnewuser:'/api/adduser',
+  weatherinfo:'/api/weather'
 };
